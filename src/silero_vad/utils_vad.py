@@ -287,7 +287,7 @@ def get_speech_timestamps(audio: torch.Tensor,
     min_silence_samples_at_max_speech = sampling_rate * 98 / 1000
 
     audio_length_samples = len(audio)
-
+    print(audio_length_samples)
     speech_probs = []
     for current_start_sample in range(0, audio_length_samples, window_size_samples):
         chunk = audio[current_start_sample: current_start_sample + window_size_samples]

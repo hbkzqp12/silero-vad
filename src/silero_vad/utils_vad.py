@@ -387,7 +387,9 @@ def get_speech_timestamps(audio: torch.Tensor,
 
     if visualize_probs:
         make_visualization(speech_probs, window_size_samples / sampling_rate)
-
+    speech1 = {}
+    speech1['aa'] = audio_length_samples;
+    speeches.append(speech1)
     return speeches
 
 
